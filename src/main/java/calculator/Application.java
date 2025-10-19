@@ -15,6 +15,9 @@ public class Application {
         String[] calStr = getSeparator(str);
         String[] numArr = calStr[1].split("[,:"+calStr[0]+"]");
 
+        // 미입력("")인 경우 0 반환
+        if(numArr[0].isEmpty()) return 0;
+
         for(String s: numArr){
             total += Integer.parseInt(s);
         }
